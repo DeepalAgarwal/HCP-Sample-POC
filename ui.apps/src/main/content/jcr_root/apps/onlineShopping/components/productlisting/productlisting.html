@@ -1,0 +1,15 @@
+<span> Product Listing Cards</span>
+
+<div class="testfilter" data-sly-use.info="productlisting.js">
+    <h1>${info.filter}</h1>
+</div>
+
+
+<div data-sly-use.model="${'com.adobe.aem.onlineshopping.core.models.GetProductsModel' @ tag = 'hcp-site:pediatric'}"
+	numberOfcards = "abcd">
+
+	<sly data-sly-list.item="${model.sample}"> 
+		<sly data-sly-resource="${ 'cards' @ resourceType='onlineShopping/components/card' }" >${item}</sly>
+	</sly>
+
+</div>
