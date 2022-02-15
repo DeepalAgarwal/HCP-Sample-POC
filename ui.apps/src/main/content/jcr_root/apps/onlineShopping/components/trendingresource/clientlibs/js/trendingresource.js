@@ -1,5 +1,5 @@
 
-/*$(".gettrendingresource").click(function(){
+$(".gettrendingresource").click(function(){
 	alert($(this).attr("tags"));
      $.ajax({
      type:'GET',
@@ -14,4 +14,4 @@
      }
     });
 
-});*/
+});

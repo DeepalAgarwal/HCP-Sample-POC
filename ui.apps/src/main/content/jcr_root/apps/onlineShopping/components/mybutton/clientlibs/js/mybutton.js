@@ -1,20 +1,24 @@
 
 $(".gettrendingresource").click(function(){
-	//alert($(this).attr("tags"));
+
+	alert($(this).attr("tags"));
+    setCookie("contentFilter", $(this).attr("tags"));
     //Cookie.set('contentFilter', $(this).attr("tags")) 
      $.ajax({
      type:'GET',
      url:'/bin/filterContent',
          data:{'tag':$(this).attr("tags")},
      	 success: function(status){
-         if(status!='')
-             console.log('No. of Pages are :'+ status);
+         console.log(status);
+         if(status=='true')
+            console.log('valid age');
          else 
-            console.log('Invalid tag');
+            console.log('Invalid age');
      }
     });
+
 });
 
-$(document).ready(function(){
-setCookie("contentFilter", $('.gettrendingresource').attr("tags"));
-});
+console.log(getCookie('contentFilter'));
+
+	

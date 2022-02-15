@@ -1,30 +1,41 @@
-<span> Product Listing Cards</span>
+<!--/* Product Cards from from PDP */-->
 
-<div class="testfilter" contentfilter="" data-sly-use.info="productlisting.js">
-    <h1>${info.filter}</h1>
-</div>
-
-<div data-sly-use.model="${'com.adobe.aem.onlineshopping.core.models.GetProductsModel' @ tag = 'hcp-site:pediatric'}"
+<span> Product Listing Cards from PDP </span>
+<div data-sly-use.model="${'com.adobe.aem.onlineshopping.core.models.GetProductDetailModel' @ tag = 'hcp-site:pediatric'}"
 	numberOfcards = "abcd">
 
-	<sly data-sly-list.item="${model.sample}"> 
-		<sly>
+	<sly data-sly-list.productDetails="${model.productDetailList}"> 
 
-        <div class="card" style="width: 18rem;">
-        
-        <img class="card-img-top" src="..." alt="Card image cap">
-        
-        <div class="card-body">
-        
-        <h5 class="card-title">Card title</h5>
-        
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        
-        </div></div>
-
+			<div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=${productDetails.image} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${productDetails.title}</h5>
+                    <p class="card-text">${productDetails.description @ context='html'}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>    
+                </div>
+			</div>
 	</sly>
-	</sly>
-
 </div>
+
+
+
+<!--/* Product Cards from Page Properties */-->
+<!--/* 
+
+<span> Product Listing Cards from Page Properties</span>
+
+<div data-sly-use.model="${'com.adobe.aem.onlineshopping.core.models.GetProductsModel' @ tag = 'hcp-site:adult'}"
+	numberOfcards = "abcd">
+
+	<sly data-sly-list.productDetails="${model.productDetailList}"> 
+			<div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=${productDetails.image} alt="Card image cap">   
+                <div class="card-body">
+                    <h5 class="card-title">${productDetails.title}</h5>        
+                    <p class="card-text">${productDetails.description}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>    
+                </div>
+			</div>
+	</sly>
+</div>
+ */-->

@@ -66,7 +66,7 @@ public class GetFilteredPagesServlet extends SlingAllMethodsServlet {
             Query query = queryBuilder.createQuery(PredicateGroup.create(predicateMap), session);
             SearchResult result = query.getResult();
             hitsPerPage = result.getHits().size();
-            LOG.info("Search Result pages: --------------");
+            LOG.info("Search Result pages in new Project: --------------");
 
             for (Hit currentPageResult : result.getHits()) {
                 String path = currentPageResult.getPath();
