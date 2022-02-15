@@ -1,3 +1,8 @@
-< ----- Product Deatils --- >
-
-<span> ${properties.sku} </span>
+<div class="prod-details">
+<h2 class="prod-title">${properties.productTitle}</h2>
+<p class="tags" style=" border-radius: 25px;border: 2px solid #73AD21;padding: 20px; width: 200px;height: 10px; text-align:center;">${properties.tags}</p>
+<h4 class="prod-desc">${properties.productDescription @ context='html'}</h4>
+<img class="prod-img" src="${properties.fileReference}" alt="img1">
+<p class="sample-size">${properties.sampleSize @ context='html'}</p>
+<h6 class="product-sku">${properties.sku}</h6>
+</div>

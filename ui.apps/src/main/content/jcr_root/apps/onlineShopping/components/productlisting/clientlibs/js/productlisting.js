@@ -1,5 +1,5 @@
 $(document).ready(function(){
 
-    $(".testfilter").attr("contentFilter", getCookie("contentFilter"));
+    $(".testfilter").attr("contentfilter", getCookie("contentFilter"));
 
 });
