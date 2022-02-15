@@ -1,5 +1,3 @@
 #base=js
 
 site.js
-
-mysite.js
