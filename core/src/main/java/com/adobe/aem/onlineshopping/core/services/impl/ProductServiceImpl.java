@@ -66,6 +66,7 @@ public class ProductServiceImpl implements ProductService {
             predicateMap.put("property.value", "hcp-site:pediatric");
             Query query = queryBuilder.createQuery(PredicateGroup.create(predicateMap), session);
             SearchResult result = query.getResult();
+            LOG.info("Query Executed");
             noOfCards = result.getHits().size();
             LOG.info("No of Product Cards: --------------" + noOfCards);
 
