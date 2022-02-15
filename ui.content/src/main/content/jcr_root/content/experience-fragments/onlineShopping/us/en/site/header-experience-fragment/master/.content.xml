@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-01-10T10:21:12.712+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/onlineShopping/settings/wcm/templates/experience-fragment-template"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header Experience Fragment"
+        sling:resourceType="onlineShopping/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="onlineShopping/components/container"
+            layout="responsiveGrid">
+            <image
+                jcr:created="{Date}2022-01-08T21:14:16.474+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T21:17:05.422+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/image"
+                altValueFromDAM="true"
+                displayPopupTitle="true"
+                fileReference="/content/dam/onlineShopping/logo.png"
+                isDecorative="false"
+                titleValueFromDAM="true">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="1"/>
+                </cq:responsive>
+            </image>
+            <text
+                jcr:created="{Date}2022-01-08T21:14:20.775+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T22:19:44.588+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/text"
+                text="&lt;h2 style=&quot;text-align: center;&quot;>Online Shopping&lt;/h2>&#xd;&#xa;"
+                textIsRich="true">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="8"/>
+                </cq:responsive>
+            </text>
+            <image_436306195
+                jcr:created="{Date}2022-01-08T21:14:25.009+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T21:17:24.227+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/image"
+                fileReference="/content/dam/onlineShopping/global.png">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="1"
+                        width="1"/>
+                </cq:responsive>
+            </image_436306195>
+            <separator
+                jcr:created="{Date}2022-01-08T21:14:30.887+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T21:14:30.887+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/separator"/>
+            <navigation
+                jcr:created="{Date}2022-01-08T21:14:36.552+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T21:59:56.455+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/navigation"
+                collectAllPages="false"
+                disableShadowing="false"
+                navigationRoot="/content/onlineShopping/us/en"
+                structureDepth="1"
+                structureStart="1">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="7"/>
+                </cq:responsive>
+            </navigation>
+            <profileicon
+                jcr:created="{Date}2022-01-08T22:12:04.487+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T22:13:03.272+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/profileicon">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="2"/>
+                </cq:responsive>
+            </profileicon>
+            <search
+                jcr:created="{Date}2022-01-08T21:14:46.084+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-01-08T21:14:46.084+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="onlineShopping/components/search">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="3"/>
+                </cq:responsive>
+            </search>
+        </root>
+    </jcr:content>
+</jcr:root>
