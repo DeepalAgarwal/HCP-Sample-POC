@@ -58,17 +58,34 @@ public class ProductServiceImpl implements ProductService {
             final Map<String, Object > param = Collections.singletonMap(ResourceResolverFactory.SUBSERVICE, (Object) "getResourceResolver");
             resourceResolver = resourceResolverFactory.getServiceResourceResolver(param);
             Session session = resourceResolver.adaptTo(Session.class);
-            LOG.info("Got Session ---" );
+            LOG.info("Got Session variable---" );
 
             Map predicateMap = new HashMap();
-            predicateMap.put("path", "/content/onlineShopping/us/en/products");
-            predicateMap.put("type", "cq:Page");
-            predicateMap.put("property", "jcr:content/@cq:tags");
-            predicateMap.put("property.value", tag);
+            if(tag=="All") {
+                LOG.info("All Filter");
+                predicateMap.put("path", "/content/onlineShopping/us/en/homepage/productlisting");
+                predicateMap.put("type", "cq:Page");
+                predicateMap.put("property", "jcr:content/@cq:tags");
+                predicateMap.put("property.1_value", "hcp-site:pediatric");
+                predicateMap.put("property.2_value", "hcp-site:adult");
+            }
+            else
+            {
+                LOG.info("Filter Tag: " +tag);
+                predicateMap.put("path", "/content/onlineShopping/us/en/homepage/productlisting");
+                predicateMap.put("type", "cq:Page");
+                predicateMap.put("property", "jcr:content/@cq:tags");
+                predicateMap.put("property.value", tag);
+            }
+
             Query query = queryBuilder.createQuery(PredicateGroup.create(predicateMap), session);
             SearchResult result = query.getResult();
             noOfCards = result.getHits().size();
             LOG.info("No of product cards :----" + noOfCards);
+            LOG.info("Paths of the products: ");
+            for (Hit currentPageResult : result.getHits()) {
+                LOG.info(currentPageResult.getPath());
+            }
 
             for (Hit currentPageResult : result.getHits()) {
                 String path = currentPageResult.getPath();
